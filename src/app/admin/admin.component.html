@@ -1,0 +1,25 @@
+<div class="adminContainer">
+    <form class="form" (ngSubmit)="onSubmit(adminForm)" #adminForm="ngForm">
+        <div class="form_front">
+            <div class="form_details">Login</div>
+            <input type="text" name="loginID" class="input" required placeholder="Username" [(ngModel)]="adminDetails.loginID">
+            <div *ngIf="adminForm.controls['loginID']?.invalid && adminForm.controls['loginID']?.touched"
+                class="loginError">
+                Please enter LoginID.
+            </div>
+            <input type="text" class="input" name="password" required placeholder="Password" [(ngModel)]="adminDetails.password">
+            <div *ngIf="adminForm.controls['password']?.invalid && adminForm.controls['password']?.touched"
+                class="loginError">
+                Please enter password.
+            </div>
+            <button class="btn">Login</button>
+            <span class="switch">Back to registration 
+                <label for="signup_toggle" class="signup_tog" (click)="navigateToRegister()">
+                    Register here
+                </label>
+            </span>
+        </div>
+    </form>
+</div>
+<app-success-modal *ngIf="showSuccessOrErrorModal" [message]="successOrFailureMessage" [type]="respType"
+(close)="closeModal()"></app-success-modal>

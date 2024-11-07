@@ -1,0 +1,57 @@
+.user-details-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text color */
+    font-weight: bold;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+  }
+  
+  .user-table td {
+    color: #555; /* Darker text for user details */
+  }
+
+  .back-home-link {
+    display: inline-block;
+    margin-bottom: 20px; /* Space below the link */
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .back-home-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }

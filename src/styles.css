@@ -1,0 +1,405 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(80 71 71);
+}
+
+.input {
+  padding: 10px;
+  width: 280px;
+  border-radius: 10px;
+  border-style: double;
+  border-color: black;
+  font-size: 15px;
+  box-shadow: 1px 1px rgb(0, 2, 65);
+
+  font-family: cursive;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: cursive;
+}
+
+.videoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rem;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.content a {
+  font-size: 15px;
+  color: rgb(235, 236, 237);
+  text-decoration: none;
+  border: 2px solid #2E7D32;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.content a:hover {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.background-clip {
+  position: absolute;
+  right: 0;
+  /* bottom: 0; */
+  z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.header {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 45px;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #d1e7dd;
+}
+
+.services {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: cursive;
+}
+
+.service-card {
+  background: #e9ecef;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registerContainer {
+  background: #e9ecef;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registerContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.service-card p {
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #28a745;
+  /* Green background for valid button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: cursive;
+}
+
+.btn:disabled,
+.btn-invalid {
+  background-color: #ccc;
+  /* Gray background for disabled button */
+  color: #666;
+  /* Lighter text color */
+  cursor: not-allowed;
+  /* Change cursor to indicate disabled state */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.register {
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  place-items: center;
+  background: white;
+  margin-top: -1.20rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* Space between title and icon */
+  align-items: center;
+  /* Center items vertically */
+  padding: 25px 20px;
+  /* Add some padding */
+  background-color: #f8f9fa;
+  /* Optional background color */
+  border-bottom: 1px solid #dee2e6;
+  /* Optional border */
+}
+
+nav ul {
+  list-style: none;
+  /* Remove default list styles */
+  margin: 0;
+  /* Remove default margins */
+  padding: 0;
+  /* Remove default padding */
+  display: flex;
+  /* Flex display for horizontal alignment */
+}
+
+nav li {
+  margin-left: 20px;
+  /* Space between items */
+}
+
+/* .profile-icon {
+    font-size: 24px; 
+    color: black; 
+    text-decoration: none; 
+    background: #218838;
+  }
+  
+  .profile-icon:hover {
+    color: #0056b3; 
+  } */
+
+.profile-icon {
+  cursor: pointer;
+  /* Change cursor to pointer */
+  font-size: 30px;
+  /* Adjust the size of the icon */
+  color: #e8d9d9;
+  /* Icon color */
+  /* margin: 10px; */
+  transition: color 0.3s;
+  /* Transition for hover effect */
+}
+
+.profile-icon:hover {
+  color: #921a14;
+  /* Change color on hover */
+}
+
+.reg-img {
+  padding: 15px;
+  margin: 10px 0;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 20rem;
+  font-family: cursive;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.registerBtn {
+  margin-bottom: 15px;
+  /* width: 20rem; */
+  font-family: cursive;
+}
+
+.form-group input {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: cursive;
+}
+
+.contact{
+  background: white;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.error {
+  color: #d9534f;
+  /* Bootstrap danger color */
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.card {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 40px;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

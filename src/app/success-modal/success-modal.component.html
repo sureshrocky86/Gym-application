@@ -1,0 +1,11 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>
+      <i class="fas" [ngClass]="type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'" 
+         [ngStyle]="{'color': type === 'success' ? '#28a745' : '#dc3545'}"></i>
+      {{ type === 'success' ? 'Success!' : 'Error!' }}
+    </h2>
+    <p>{{ message }}</p>
+    <button (click)="closeModal()">Close</button>
+  </div>
+</div>

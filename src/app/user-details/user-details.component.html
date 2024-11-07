@@ -1,0 +1,20 @@
+<div class="user-details-container">
+    <h1 class="header">Welcome to Gym Admin Page</h1>
+    <a routerLink="/home" class="back-home-link">Back to Home</a>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
