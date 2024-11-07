@@ -3,18 +3,16 @@ const path = require('path')
 const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./userRoutes');
-const functions = require("firebase-functions");
-const handler = require('serverless-http');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(express.static(path.join(__dirname, 'dist/sample-website')))
+app.use(express.static("frontend"));
 app.use(cors());
 app.use(express.json()); // For parsing application/json
 app.use('/api', userRoutes);
-exports.api = functions.https.onRequest(app);
+// exports.api = functions.https.onRequest(app);
 
 app.use('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/sample-website/index.html'));
@@ -37,9 +35,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-
-module.exports.handler = async (event, context) => {
-  const result = await handler(event, context);
-  return result;
-}
